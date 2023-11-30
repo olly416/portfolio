@@ -1,0 +1,4 @@
+배포id
+AKfycbzh7zJamWtkE85c9oE3XnrPb23P05h55QQvV_DCY6mgcvlQl0pb06KKOp7ZbLGL6oxEtw
+웹앱
+https://script.google.com/macros/s/AKfycbzh7zJamWtkE85c9oE3XnrPb23P05h55QQvV_DCY6mgcvlQl0pb06KKOp7ZbLGL6oxEtw/exec
