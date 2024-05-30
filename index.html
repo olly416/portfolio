@@ -5,9 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Olivia's Portfolio</title>
+        
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/fa2fe9a1db.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">       
+        
         <!-- CSS -->
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/main.css">       
@@ -79,7 +81,7 @@
                             <p>이름</p>
                             <p>생년월일</p>
                             <p>연락처</p>
-                            <p>Skill</p>
+                            <p>사용가능언어</p>
                         </div>
                         <div class="content">
                             <p>유미선</p>
@@ -161,10 +163,10 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="works work03">
+                        <div class="works work04">
                             <a href="https://codepen.io/collection/oEOzVE" target="_blank">
                                 <div class="workImg">
-                                    <img src="img/home04.jpg" alt="work04">
+                                    <img src="img/home04.png" alt="work04">
                                 </div>
                                 <div class="workContent">
                                     <p>
@@ -180,28 +182,29 @@
             <section class="contact" id="contact">
                 <div class="container">
                     <h2>Contact</h2>
-                    <form class="gform pure-form pure-form-stacked" method="POST" data-email="tokyobabylon416@gmail.com" target="iframe1"
-                    action="https://script.google.com/macros/s/AKfycbzcSM5wDuA7NMNzt50KiYO_SvvKx2Eh9C243hpbLjqrhgpOEowNY8g3K4iabkKHsCxt/exec">
-                    <p>궁금하신 부분은 메일로 문의 주시면 2 ~ 3일내로 답변 드립니다.</p>
+                    <form class="gform pure-form pure-form-stacked" method="POST"
+                        data-email="nabicomeon@gmail.com" target="iframe1"
+                        action="https://script.google.com/macros/s/AKfycbzcSM5wDuA7NMNzt50KiYO_SvvKx2Eh9C243hpbLjqrhgpOEowNY8g3K4iabkKHsCxt/exec">
+                    <p>메일 보내 주시면 3일 이내로 답변하겠습니다. 전송 후에 5초 정도 기다려주세요.</p>
                         <div class="form-elements">
                             <fieldset class="pure-group">
                                 <label for="name" class="hidden">성함</label>
-                                <input type="text" id="name" name="name" placeholder="성함">
+                                <input type="text" id="fullname" name="name" placeholder="성함" required>
                             </fieldset>
                             <fieldset class="pure-group">
                                 <label for="email" class="hidden">이메일</label>
-                                <input id="email" name="email" type="email" 
+                                <input id="email_id" name="email" type="email" 
                                 placeholder="abc@email.com">
                             </fieldset>                    
                             <fieldset class="pure-group">
                                 <label for="title" class="hidden">제목</label>
-                                <input type="text" id="title" name="title" placeholder="제목">
+                                <input type="text" id="title" name="title" placeholder="제목" required>
                             </fieldset>                   
                             <fieldset class="pure-group honeypot-field">
-                                <label for="honeypot" class="hidden">메시지</label>
-                                <textarea id="honeypot" class="message" name="message" rows="6" placeholder="메시지"></textarea>
+                                <label for="message" class="hidden">메시지</label>
+                                <textarea id="message" class="message" name="message" rows="6" placeholder="메시지" required></textarea>
                             </fieldset>                    
-                            <button class="button-success pure-button submit">이메일 보내기</button>
+                            <button class="button-success pure-button submit" onclick="SendMail()">이메일 보내기</button>
                         </div>
                         <div style="display:none" class="thankyou_message">
                             <br>
