@@ -7,31 +7,22 @@ document.addEventListener('DOMContentLoaded',function(){
     const spell1 = document.querySelector('.spell1');
     const spell2 = document.querySelector('.spell2');
     const spell3 = document.querySelector('.spell3');
-    const spell4 = document.querySelector('.spell4');
-    // const arrayMenu = Array.from(document.querySelectorAll('.navMenu'));
+    const spell4 = document.querySelector('.spell4');    
     const Sections = document.querySelectorAll('section');
-    const Container = document.querySelectorAll('.container');
-    // const Home = document.querySelector('.home');
-    // const aboutMe = document.querySelector('.aboutme');
-    // const work = document.querySelector('.work');
-    // const contact = document.querySelector('.contact');
+    const Container = document.querySelectorAll('.container');    
     const duckimg = document.querySelector('.magicBox .duckimg');
     const magicDuck = document.querySelector('.magicDuck');
     const clickSpell = document.querySelector('.clickspell');
-    const positionValue = frame.style.position;
-    
+    // const positionValue = frame.style.position;
     let MainHeight;
     let ScrollPercent;
     let scrollY;
     scrollY = window.scrollY;
-    
 
-    
-    
-    
 
     sectionDetector();
     ShapeControl();
+
 
     // 스크롤하면 현재 스크롤 값 계산해서 넘기기
     window.addEventListener('scroll',function(){
@@ -141,6 +132,7 @@ document.addEventListener('DOMContentLoaded',function(){
             Sections[3].classList.add('linearBG');
         }
     }
+        
     function removeHover(){
         navList.forEach(function(item){
             item.classList.remove('hover');
@@ -160,17 +152,17 @@ document.addEventListener('DOMContentLoaded',function(){
 
     // 각각 Spell 클릭하면 해당 내용 반영해서 오리 변경하기
     spell1.addEventListener('click',function(){
-        SpellClick('spell1','짠!');
+        SpellClick('spell1','작아지기');
     });   
     spell2.addEventListener('click',function(){
-        SpellClick('spell2','무섭지?');
+        SpellClick('spell2','커지기');
     });
     spell3.addEventListener('click',function(){
         magicDuck.style.opacity = 0;
-        SpellClick('spell3','내가 보여?');
+        SpellClick('spell3','사라지기');
     });
     spell4.addEventListener('click',function(){
-        SpellClick('spell4','살았다');    
+        SpellClick('spell4','원래대로');    
     });
     function SpellClick(spellClass, spellTxt){
         removeSpell();

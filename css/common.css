@@ -12,7 +12,10 @@ body {
   font-size: 16px;
   font-family: "Nanum Myeongjo", serif;
 }
-/* 스크롤바 css */
+
+/* ***************************** */
+/* ********스크롤바 css ******** */
+/* **************************** */
 body::-webkit-scrollbar {
   width: 3px;
 }
@@ -28,7 +31,9 @@ body::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Common Elements */ /* Global Css*/
+/* ***************************** */
+/*  Common Elements(Global Css)  */
+/* ***************************** */
 body {
   color: #000;
   background: #050925;
@@ -127,91 +132,16 @@ section:not(.home) .container {
     display:none;
 }
 
-/* Animation Effect */
 header.show,
 .home.show {
   opacity: 1;
 }
-@-webkit-keyframes shrink {
-  0% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-  }
-  100% {
-    -webkit-transform: scaleY(0.3);
-    transform: scaleY(0.3);
-  }
-}
-@keyframes shrink {
-  0% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-  }
-  100% {
-    -webkit-transform: scaleY(0.3);
-    transform: scaleY(0.3);
-  }
-}
-@-webkit-keyframes ArrowDown {
-  0% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
-    opacity: 1;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
-    opacity: 0;
-  }
-}
-@keyframes ArrowDown {
-  0% {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
-    opacity: 1;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadeUp {
-  100% {
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-    opacity: 1;
-  }
-}
-@keyframes fadeUp {
-  100% {
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-    opacity: 1;
-  }
-}
+
+/* ******************/
+/* Animation Effect */
+/* ******************/
+
+/* 배경화면 별 반짝이는 효과 */
 @-webkit-keyframes twinkling {
   20% {
     opacity: 0.1;
@@ -250,6 +180,74 @@ header.show,
     opacity: 0.2;
   }
 }
+
+/* home section의 화살표 아래로 향하는 애니메이션 */
+@-webkit-keyframes ArrowDown {
+  0% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    opacity: 0;
+  }
+}
+@keyframes ArrowDown {
+  0% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    opacity: 0;
+  }
+}
+
+/* 메뉴 서서히 나타나게 하기 */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* aboutMe section 스크롤 위치 따라 서서히 나타나기 */
+@-webkit-keyframes fadeUp {
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+}
+
+/* 주문 위에 마우스 올리면 글자 반짝임 효과 */
 @-webkit-keyframes neonFont {
   60% {
     text-shadow: 0 -80px 150px #fff, 30px -80px 150px #fff,
@@ -286,18 +284,18 @@ header.show,
     text-shadow: 0 0 5em blue, 0 0 30px #ff9e9e;
   }
 }
-
+/* 배경화면 흰 바탕 흐르는 효과 */
 @-webkit-keyframes linearBG {
   100% {
     background-position-y: 0;
   }
 }
-
 @keyframes linearBG {
   100% {
     background-position-y: 0;
   }
 }
+/* 흔들리는 오리 효과 */
 @-webkit-keyframes shaking {
   55% {
     -webkit-transform: rotate(-20deg);
@@ -310,6 +308,7 @@ header.show,
     transform: rotate(-20deg);
   }
 }
+/* 주문 클릭하면 각각 애니메이션 효과 */
 @-webkit-keyframes spell1 {
   35%,
   80% {
@@ -350,8 +349,8 @@ header.show,
     transform: scale(0.5);
   }
   100% {
-    -webkit-transform: scale(1.8);
-    transform: scale(1.8);
+    -webkit-transform: scale(1.35);
+    transform: scale(1.35);
   }
 }
 @keyframes spell2 {
@@ -368,8 +367,8 @@ header.show,
     transform: scale(0.5);
   }
   100% {
-    -webkit-transform: scale(1.8);
-    transform: scale(1.8);
+    -webkit-transform: scale(1.35);
+    transform: scale(1.35);
   }
 }
 @-webkit-keyframes spell3 {
@@ -461,45 +460,4 @@ header.show,
     -webkit-transform: rotate(15deg);
     transform: rotate(15deg);
   }
-}
-@-webkit-keyframes contactAnim {
-  20% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0.1;
-  }
-  60% {
-    opacity: 0.5;
-    -webkit-transform: translateX(120px);
-    transform: translateX(120px);
-  }
-  80% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 0.99;
-  }
-}
-@keyframes contactAnim {
-  20% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0.1;
-  }
-  60% {
-    opacity: 0.5;
-    -webkit-transform: translateX(120px);
-    transform: translateX(120px);
-  }
-  80% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 0.99;
-  }
-}
-
-
-    
+}  

@@ -5,14 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Olivia's Portfolio</title>
-        
-        <!-- Font Awesome -->
-        <script src="https://kit.fontawesome.com/fa2fe9a1db.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">       
-        
         <!-- CSS -->
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/main.css">       
+        <!-- Font Awesome CSS -->
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">       
     </head>
     <body>    
         <header>
@@ -94,7 +92,7 @@
                         <p>
                             <span>'웹퍼블리싱'은 저에겐 마법같이 느껴집니다.<br></span>                            
                             마법사들이 주문을 외워 무언가를 바꾸는 것처럼, <br>
-                            코딩은 웹브라우저를 마술같이 바꾸어 줍니다.
+                            코딩은 웹브라우저를 마법같이 변신시킵니다.
                         </p>
                     </div>
                     <p class="ieinfo">
@@ -102,7 +100,7 @@
                         브라우저를 바꿔서 접속하시면 볼 수 있어요
                     </p>
                     <div class="magic">
-                        <p class="clickspell">주문을 눌러봐!</p>
+                        <p class="clickspell">주문 클릭!</p>
                         <div class="magicBox">
                             <div class="spell">
                                 <p class="spell1">Diminuendo</p>
@@ -112,7 +110,7 @@
                             </div>
                             <div class="duckbox">
                                 <div class="duckimg">
-                                    <img src="img/duck03.png" alt="magicDuck" class="magicDuck">
+                                    <img src="img/duck.png" alt="magicDuck" class="magicDuck">
                                 </div>
                             </div>
                         </div>
@@ -122,7 +120,7 @@
             <section class="work" id="work">
                 <div class="container">
                     <h2>Work</h2>      
-                    <span>카드를 누르면 새창에서 열립니다.</span>          
+                    <span>이미지를 누르면 새 창으로 열립니다.</span>          
                     <div class="workWrapper">
                         <div class="works work01">
                             <a href="http://solaris.dothome.co.kr/portfolio/index.html" target="_blank">
@@ -169,9 +167,7 @@
                                     <img src="img/home04.png" alt="work04">
                                 </div>
                                 <div class="workContent">
-                                    <p>
-                                        Codepen에 올린 연습코드 모음
-                                    </p>
+                                    <p>Codepen에 올린 연습코드 모음</p>
                                 </div>
                             </a>
                         </div>
@@ -182,10 +178,10 @@
             <section class="contact" id="contact">
                 <div class="container">
                     <h2>Contact</h2>
-                    <form class="gform pure-form pure-form-stacked" method="POST"
+                    <form class="gform pure-form pure-form-stacked" method="POST" 
                         data-email="nabicomeon@gmail.com" target="iframe1"
                         action="https://script.google.com/macros/s/AKfycbzcSM5wDuA7NMNzt50KiYO_SvvKx2Eh9C243hpbLjqrhgpOEowNY8g3K4iabkKHsCxt/exec">
-                    <p>메일 보내 주시면 3일 이내로 답변하겠습니다. 전송 후에 5초 정도 기다려주세요.</p>
+                        <p>메일 보내 주시면 3일 이내로 답변하겠습니다. 전송 후에 5초 정도 기다려주세요.</p>
                         <div class="form-elements">
                             <fieldset class="pure-group">
                                 <label for="name" class="hidden">성함</label>
@@ -228,10 +224,12 @@
         
         <!-- 제이쿼리 라이브러리 -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- 메인 js -->
+        <script src="js/main.js"></script>  
         <!-- 메일전송 FORM -->
         <script data-cfasync="false" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
         <script src="js/mailForm.js"></script>
-        <!-- 메인 js -->
-        <script src="js/main.js"></script>  
+        <!-- Font Awesome JS -->
+        <script src="https://kit.fontawesome.com/fa2fe9a1db.js" crossorigin="anonymous"></script>
     </body>
 </html>
