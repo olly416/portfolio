@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded',function(){
     const header = document.querySelector('header');
     const navList = header.querySelectorAll('nav ul li');
-    const frame = document.querySelector('.frame');
-    const twinkling = document.querySelector('.twinkling');
+    const frame = document.querySelector('.frame');    
     const shapes = document.querySelectorAll('.shape');  
     const spell1 = document.querySelector('.spell1');
     const spell2 = document.querySelector('.spell2');
@@ -12,13 +11,11 @@ document.addEventListener('DOMContentLoaded',function(){
     const Container = document.querySelectorAll('.container');    
     const duckimg = document.querySelector('.magicBox .duckimg');
     const magicDuck = document.querySelector('.magicDuck');
-    const clickSpell = document.querySelector('.clickspell');
-    // const positionValue = frame.style.position;
+    const clickSpell = document.querySelector('.clickspell');    
     let MainHeight;
     let ScrollPercent;
     let scrollY;
     scrollY = window.scrollY;
-
 
     sectionDetector();
     ShapeControl();
