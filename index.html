@@ -9,7 +9,10 @@
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/main.css">       
         <!-- Font Awesome CSS -->        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">       
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <!-- favicon 경로 null  -->
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+        
     </head>
     <body>    
         <header>
@@ -155,7 +158,7 @@
                                 <div class="workContent">
                                     <p>
                                         MS Tech(기업)<br>
-                                        PC, Tablet, Mobile</span>
+                                        <span>PC, Tablet, Mobile</span>
                                     </p>
                                 </div>
                             </a>
@@ -166,7 +169,8 @@
                                     <img src="img/home04.png" alt="work04">
                                 </div>
                                 <div class="workContent">
-                                    <p>Codepen에 올린 연습코드 모음</p>
+                                    <p>Codepen 연습코드</p>
+                                    <span>Codepen에 올린 연습코드 모음</span>
                                 </div>
                             </a>
                         </div>
@@ -177,37 +181,23 @@
             <section class="contact" id="contact">
                 <div class="container">
                     <h2>Contact</h2>
-                    <form class="gform pure-form pure-form-stacked" method="POST" 
-                        data-email="nabicomeon@gmail.com" target="iframe1"
-                        action="https://script.google.com/macros/s/AKfycbzcSM5wDuA7NMNzt50KiYO_SvvKx2Eh9C243hpbLjqrhgpOEowNY8g3K4iabkKHsCxt/exec">
-                        <p>메일 보내 주시면 3일 이내로 답변하겠습니다. 전송 후에 5초 정도 기다려주세요.</p>
-                        <div class="form-elements">
-                            <fieldset class="pure-group">
-                                <label for="name" class="hidden">성함</label>
-                                <input type="text" id="fullname" name="name" placeholder="성함" required>
-                            </fieldset>
-                            <fieldset class="pure-group">
-                                <label for="email" class="hidden">이메일</label>
-                                <input id="email_id" name="email" type="email" 
-                                placeholder="abc@email.com">
-                            </fieldset>                    
-                            <fieldset class="pure-group">
-                                <label for="title" class="hidden">제목</label>
-                                <input type="text" id="title" name="title" placeholder="제목" required>
-                            </fieldset>                   
-                            <fieldset class="pure-group honeypot-field">
-                                <label for="message" class="hidden">메시지</label>
-                                <textarea id="message" class="message" name="message" rows="6" placeholder="메시지" required></textarea>
-                            </fieldset>                    
-                            <button class="button-success pure-button submit" onclick="SendMail()">이메일 보내기</button>
-                        </div>
-                        <div style="display:none" class="thankyou_message">
-                            <br>
-                            <h3>메일이 전송되었습니다. 확인 후 답장드리겠습니다.</h3>
-                            <br>
-                        </div>
+                    <p>메일을 보내 주시면 빠른 시일 내로 답변하겠습니다.</p>                       
+                    <form id="contact-form">
+                        <input type="hidden" name="contact_number" value="697483">
+                        <fieldset class="form_group group1">
+                            <label for="fullname">이름</label>
+                            <input type="text" id="fullname" name="user_name">
+                        </fieldset>
+                        <fieldset class="form_group group2">
+                            <label for="email_id">이메일</label>
+                            <input type="email" id="email_id"  name="user_email">
+                        </fieldset>
+                        <fieldset class="form_group group3">
+                            <label for="message">메시지</label>
+                            <textarea id="message" name="message"></textarea>
+                        </fieldset>
+                        <input type="submit" id="sendBtn" value="submit">
                     </form>
-                    <iframe id="iframe1" name="iframe1" style="display:none"></iframe>
                 </div>
             </section>
         </main>
@@ -221,12 +211,14 @@
             </p>            
         </footer>
         
+        <!-- 제이쿼리 로드 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <!-- 메인 js -->
-        <script src="js/main.js"></script>  
-        <!-- 메일전송 FORM -->
-        <script data-cfasync="false" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
-        <script src="js/mailForm.js"></script>
+        <script src="js/main.js"></script>        
         <!-- Font Awesome JS -->
         <script src="https://kit.fontawesome.com/fa2fe9a1db.js" crossorigin="anonymous"></script>
+        <!-- 메일전송 FORM -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>        
     </body>
 </html>

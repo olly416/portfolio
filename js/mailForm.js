@@ -35,7 +35,6 @@ function formatMailBody(obj, order) {
    }
   
   function doPost(e) {
-  
     try {
       Logger.log(e); // the Google Script version of console.log see: Class Logger
       record_data(e);

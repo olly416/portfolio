@@ -49,7 +49,7 @@ header ul li a {
   -o-transition: 0.15s linear;
   transition: 0.15s linear;
 }
-header ul li:hover a, 
+header ul li:hover a,
 header ul li.hover a {
   color: #ddd;
   font-size: 16px;
@@ -60,7 +60,7 @@ header ul li i {
   -o-transition: 0.15s linear;
   transition: 0.15s linear;
 }
-header ul li:hover i ,
+header ul li:hover i,
 header ul li.hover i {
   -webkit-transform: translateY(-3px);
   -ms-transform: translateY(-3px);
@@ -83,11 +83,11 @@ header ul li span {
 .frame {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;  
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;  
+  flex-direction: column;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -98,7 +98,7 @@ header ul li span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;    
+  position: relative;
   height: 100%;
   -webkit-transition: 0.1s linear;
   -o-transition: 0.1s linear;
@@ -124,7 +124,7 @@ header ul li span {
   -ms-flex: 1 1 40%;
   flex: 1 1 40%;
   padding: 6em 0 3em;
-  text-align: center;  
+  text-align: center;
 }
 .shape1 .inner2,
 .shape2 .inner1,
@@ -217,7 +217,7 @@ header ul li span {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 70%;
   flex: 1 1 70%;
-  color:#eee;
+  color: #eee;
 }
 .reason {
   margin: 50px 0;
@@ -436,11 +436,11 @@ header ul li span {
   animation: linearBG 6s linear forwards;
 }
 .workWrapper {
-  display:-ms-grid;
-  display:grid;
+  display: -ms-grid;
+  display: grid;
   -ms-grid-columns: 1fr 40px 1fr;
-  grid-template-columns: repeat(2,1fr);
-  gap:40px 60px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 60px;
   padding-top: 10px;
 }
 .works {
@@ -451,7 +451,7 @@ header ul li span {
   border: 5px solid rgba(0, 0, 0, 0.4);
   border-radius: 20px;
   overflow: hidden;
-  cursor: pointer;  
+  cursor: pointer;
 }
 .works a {
   display: block;
@@ -488,7 +488,8 @@ header ul li span {
   height: 100%;
   background: rgba(255, 255, 255, 0.8);
 }
-.works .workContent p {
+.works .workContent p,
+.work04 span{
   display: block;
   position: absolute;
   top: 100%;
@@ -498,11 +499,18 @@ header ul li span {
   transform: translate(-50%, -50%);
   white-space: nowrap;
 }
+.work04 span{
+  top:50%;
+}
+.work04 .workContent p {
+  display:none;  
+}
 
 /* ------------ SECTION : Contact ------------ */
 .contact {
   width: 100%;
   height: 90vh;
+  font-size: 14px;
   background: #aa4757 url(../img/stars.png);
 }
 .contact.linearBG .container {
@@ -515,74 +523,84 @@ header ul li span {
 .contact form {
   width: 50%;
 }
-form input,
-form textarea {
+#contact-form label,
+#contact-form input,
+#contact-form textarea {
   padding: 0;
-  padding-left: 14px;
-  margin-bottom: 15px;
+  margin: 12px 0;
   border: 0;
-  border-radius: 5px;
-  background-color: rgb(238, 238, 238, 0.25);  
-  font-size: 0.875em;  
+  border-radius: 8px;
+  background-color: rgb(238, 238, 238, 0.25);
   font-family: "Noto Sans KR", sans-serif;
   font-weight: bold;
+  white-space: nowrap;
   cursor: pointer;
 }
-.form-elements .pure-group:nth-child(1),
-.form-elements .pure-group:nth-child(2) {
+#contact-form .form_group {
+  width: 100%;
+}
+#contact-form label {
   display: inline-block;
-  width: 49.5%;
+  width: 12%;
+  padding-right: 14px;
+  background: none;
 }
-.form-elements .pure-group:nth-child(3),
-.form-elements .pure-group:nth-child(4) {
-  width: 100%;
+#contact-form label,
+#contact-form input:not(#sendBtn) {
+  line-height: 2.7;
 }
-form input {
-  width: 100%;
-  border: 2px solid transparent;  
-  line-height: 40px;
-}
-form input::placeholder,
-form textarea::placeholder{
-  color:#ddd;
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  color: #ddd;
   font-weight: normal;
 }
-form textarea {
-  width: 100%;
-  padding-top: 10px;
+#contact-form input:not(#sendBtn),
+#contact-form textarea {
+  width: 80%;
+  border-radius: 8px;
+  border: 2px solid transparent;
+}
+#contact-form .group3 label {
+  vertical-align: top;
+}
+#contact-form textarea {
+  display: inline-block;
+  min-height: 120px;
   resize: none;
 }
-form input:hover,
-form textarea:hover {
+#contact-form input:hover,
+#contact-form textarea:hover {
   background-color: rgb(238, 238, 238, 0.5);
 }
-form input:focus,
-form textarea:focus {
-  border: 2px solid #aa4757;
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: #aa4757;
   background-color: rgb(238, 238, 238, 0.85);
   color: #111;
   outline: none;
 }
-form .message {
-  min-height: 150px;
-  margin-bottom: 20px;
-}
-form .submit {
-  padding: 0 60px;
+#contact-form #sendBtn {
+  width: 95%;
+
   border: 2px solid transparent;
-  border-radius: 5px;
-  background-color: rgb(238, 238, 238, 0.85);
-  line-height: 40px;
+  border-radius: 10px;
+  color: #aa4757;
+  background-color: rgb(238, 238, 238, 0.5);
+  letter-spacing: 2.5px;
+  line-height: 45px;
   font-weight: bold;
+  font-size: 14px;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  transition: 0.4s;
   cursor: pointer;
 }
-form .submit:hover {
-  background-color: #aa4757;
+#contact-form #sendBtn:hover {
+  background-color: rgb(170, 71, 87, 0.6);
   color: rgb(238, 238, 238, 0.85);
 }
-form .submit:active {
+#contact-form #sendBtn:active {
   border: 2px solid #eee;
 }
 
@@ -609,7 +627,7 @@ footer {
   background-image: -o-linear-gradient(top, #aa4757, #a53e5d);
   background-image: linear-gradient(to bottom, #aa4757, #a53e5d);
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
   line-height: 2;
   -webkit-backdrop-filter: blur(30px);
@@ -639,8 +657,8 @@ footer {
   .magicBox .duckbox .magicDuck {
     width: 70%;
   }
-  .workWrapper {   
-    gap:20px 40px;
+  .workWrapper {
+    gap: 20px 40px;
     padding-top: 20px;
   }
   .works {
@@ -667,11 +685,11 @@ footer {
     -o-transition: 0.5s cubic-bezier(0.79, 0.24, 0.36, 0.75);
     transition: 0.5s cubic-bezier(0.79, 0.24, 0.36, 0.75);
   }
-  .works .workContent p {
+  .works .workContent p:not(.work04 p) {
     top: 50%;
   }
-  .form-elements .pure-group:nth-child(1),
-  .form-elements .pure-group:nth-child(2) {
+  .form-elements .form_group:nth-child(1),
+  .form-elements .form_group:nth-child(2) {
     width: 49%;
   }
   #contact p {
@@ -680,12 +698,12 @@ footer {
 }
 
 @media (max-width: 1024px) {
-  main{
+  main {
     height: 400vh;
   }
-  .home{
+  .home {
     width: 100vh;
-  } 
+  }
   main::before {
     height: 330vh;
   }
@@ -694,11 +712,11 @@ footer {
   }
   header ul li {
     width: 5.8rem;
-  } 
+  }
   .profile .title {
     -webkit-box-flex: 1;
-    -ms-flex: 1 1 30%;
-    flex: 1 1 30%;
+    -ms-flex: 1 1 40%;
+    flex: 1 1 40%;
     padding-right: 8%;
     text-align: right;
   }
@@ -713,7 +731,7 @@ footer {
   }
   .profile .content p:last-child {
     font-size: 0.85rem;
-  }  
+  }
   .works {
     width: 280px;
     height: 200px;
@@ -721,22 +739,22 @@ footer {
   #email {
     font-size: 12px;
   }
+  .contact form {
+    width: 70%;
+  }
 }
 @media (max-width: 768px) {
-  .home{
+  .home {
     height: 100vh;
   }
   h2 {
-    font-size: 1.8em;
+    font-size: 1.65em;
   }
   .inner2 {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 25%;
     flex: 1 1 25%;
     padding: 9em 0 6em;
-  }
-  .inner2 h2 {
-    font-size: 2em;
   }  
   header img {
     width: 55%;
@@ -762,12 +780,12 @@ footer {
   header ul li:first-child {
     display: none;
   }
-  .work span{
+  .work span {
     font-size: 0.9em;
   }
   .workWrapper {
     grid-template-columns: 1fr;
-    gap:15px 0;    
+    gap: 15px 0;
   }
   .works {
     width: 260px;
@@ -783,8 +801,8 @@ footer {
   .profile p {
     white-space: nowrap;
   }
-  .form-elements .pure-group:nth-child(1),
-  .form-elements .pure-group:nth-child(2) {
+  .form-elements .form_group:nth-child(1),
+  .form-elements .form_group:nth-child(2) {
     width: 100%;
   }
   .contact form {
@@ -804,6 +822,10 @@ footer {
   header img {
     width: 50%;
   }
+  .inner2 h2 {
+    font-size: 1.25em;
+    margin-bottom: 30px;
+  }
   .aboutme .magic {
     margin-left: 0;
   }
@@ -820,8 +842,8 @@ footer {
   .workWrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    gap:0;
-  }  
+    gap: 0;
+  }
   .works {
     width: 220px;
     height: 160px;
@@ -830,57 +852,59 @@ footer {
   .works p,
   .work span {
     font-size: 0.8rem;
-  }  
+  }
   .submit,
   .reason p,
   .contact p {
     font-size: 0.75rem;
   }
+  #contact-form label {
+    width: 15%;
+    font-size: 14px;
+  }
 }
-@media (max-width: 475px) {    
+@media (max-width: 475px) {
   h2 {
     font-size: 1.2em;
   }
-  main::before{
+  main::before {
     height: 300vh;
   }
-  section:not(.home){
+  section:not(.home) {
     padding: 15% 0;
   }
-  section:not(.home) .container{
-    padding:2.5em 0;
+  section:not(.home) .container {
+    padding: 2.5em 0;
   }
-  section:not(.home) h2{
-    line-height: 1.5;
+  section:not(.home) h2 {
+    font-size: 1.25em;
     margin-bottom: 10px;
   }
-  .frame{
+  .frame {
     height: 100%;
     z-index: 0;
   }
-  .inner2{
-    padding:0;
+  .inner2 {
+    padding: 0;
   }
-  .inner2 h2 {
-    font-size: 1.5em;
-  }
+  
   header img {
     width: 40%;
   }
   header ul li {
     width: 3.5rem;
-  }  
+  }
   .inner2 {
-    -webkit-box-pack:center;
-    -ms-flex-pack:center;
-    justify-content:center;
-  }  
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
   .aboutme p,
   .contact p,
   .magic .clickspell {
     font-size: 0.8em;
   }
-  .profile p{
+  .profile p {
     line-height: 2.3;
   }
   .reason {
@@ -889,10 +913,10 @@ footer {
   .aboutme .magic {
     width: 100%;
   }
-  .aboutme .magicBox{
+  .aboutme .magicBox {
     height: 80%;
   }
-  .magicBox .duckbox .magicDuck{
+  .magicBox .duckbox .magicDuck {
     width: 55px;
     height: 65px;
   }
@@ -901,18 +925,22 @@ footer {
   }
   .workWrapper {
     padding-top: 5px;
-  }  
+  }
   .works {
     width: 42vw;
     height: 16vh;
-    margin:0 0 10px 0;
+    margin: 0 0 10px 0;
   }
   .reason p span,
   .works span,
   #contact p,
-  footer span{
-    display:none;
-  }  
+  footer span {
+    display: none;
+  }
+  .work04 .workContent p {
+    display:block;
+    top:50%;
+  }
   .contact {
     height: 100vh;
     padding: 0;
@@ -924,7 +952,10 @@ footer {
   form input,
   form textarea {
     font-size: 0.7em;
-    margin-bottom: 8px;   
+    margin-bottom: 8px;
+  }
+  #contact-form label {
+    width: 18%;
   }
   form .message {
     padding-top: 5px;
@@ -932,17 +963,17 @@ footer {
     line-height: 1.7;
     margin-bottom: 0px;
   }
-  form .submit{
+  form .submit {
     line-height: 34px;
-  }  
-  footer{
+  }
+  footer {
     height: 5vh;
   }
 }
-@media (max-width: 375px) {  
+@media (max-width: 375px) {
   .inner2 h2 {
     line-height: 1.8;
-  }  
+  }
   .container {
     width: 88%;
   }
@@ -973,60 +1004,63 @@ footer {
 
 /* IE10+ */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    .logo img:first-child{
-        display:none;
-    }
-    .frame {        
-        position:relative;
-        width: 100%;
-        height: 100vh;
-        overflow-x: hidden;
-        z-index: 1;
-    }   
-    .shape1 .inner1,
-    .shape1 .inner3,
-    .shape2 .inner2,
-    .shape3 .inner1,
-    .shape3 .inner3 {        
-        background-color: white;
-    }
-    .shape1 .inner2,
-    .shape2 .inner1,
-    .shape2 .inner3,
-    .shape3 .inner2 {
-        background-color: transparent;
-    }   
-    .aboutme {
-        color:#eee;
-        opacity:0.8;
-    }
-    .aboutme h2, .aboutme .profile p, .aboutme .reason, .aboutme .magic{
-        opacity:1;
-    }    
-    header {
-        opacity:1;
-        background-color:rgba(0, 0, 0, 0.05);
-    }    
-    header *{
-        color:rgba(255, 255, 255, 0.8);
-    }
-    .ieinfo{
-        display:inline-block;
-        font-size: 1em;
-        width: 90%;
-    }
-    .clickspell{
-        display:none;
-    }
-    .works{
-        outline:none;
-        border: 5px solid rgba(0, 0, 0, 0.4);
-    }
-    .pure-group input{
-        border:none;
-        height: 48px;
-    }
-    .pure-group input:focus{
-        border:none;
-    }
+  .logo img:first-child {
+    display: none;
+  }
+  .frame {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    z-index: 1;
+  }
+  .shape1 .inner1,
+  .shape1 .inner3,
+  .shape2 .inner2,
+  .shape3 .inner1,
+  .shape3 .inner3 {
+    background-color: white;
+  }
+  .shape1 .inner2,
+  .shape2 .inner1,
+  .shape2 .inner3,
+  .shape3 .inner2 {
+    background-color: transparent;
+  }
+  .aboutme {
+    color: #eee;
+    opacity: 0.8;
+  }
+  .aboutme h2,
+  .aboutme .profile p,
+  .aboutme .reason,
+  .aboutme .magic {
+    opacity: 1;
+  }
+  header {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  header * {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .ieinfo {
+    display: inline-block;
+    font-size: 1em;
+    width: 90%;
+  }
+  .clickspell {
+    display: none;
+  }
+  .works {
+    outline: none;
+    border: 5px solid rgba(0, 0, 0, 0.4);
+  }
+  .form_group input {
+    border: none;
+    height: 48px;
+  }
+  .form_group input:focus {
+    border: none;
+  }
 }

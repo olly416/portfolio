@@ -47,6 +47,11 @@ h2 {
   font-size: 2.5em;
   font-weight: 900;
 }
+h2:not(.frame h2){
+  font-size: 2.1em;
+  text-transform: uppercase;
+  letter-spacing : 4px;
+}
 main {
   width: 100%;
   position: relative;

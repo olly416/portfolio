@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded',function(){
         if( scrollY <= scrollVal){
             frame.style.position = "static";   
         }else{
-            frame.style.position = "fixed";        
+            frame.style.position = "sticky";        
         }
     }
     
@@ -179,4 +179,29 @@ document.addEventListener('DOMContentLoaded',function(){
         },8000);
         magicDuck.style.opacity = 1;
     }
+
+
+    // EmailJS 서비스 사용
+    emailjs.init({
+        publicKey: "ACTGZSKJc1WPxesTQ",               
+    });
+
+    var mail_form = document.getElementById('contact-form');
+    mail_form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var templateParams = {
+            name: document.querySelector('input[name=user_name]').value,
+            email: document.querySelector('input[name=user_email]').value,
+            message: document.querySelector('textarea[name=message]').value
+        };    
+        emailjs.send('service_569dwh4', 'template_egqpfdp', templateParams)
+            .then(function(response) {
+                alert('문의주셔서 감사합니다. 메일이 성공적으로 전송되었습니다.');
+                mail_form.reset();
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('메일전송이 실패했습니다. 다시 전송해주세요.');
+        });
+    });
+
 });
